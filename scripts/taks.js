@@ -7,17 +7,25 @@
 window.addEventListener('load', function () {
 
   /* ---------------- variables globales y llamado a funciones ---------------- */
-  
-
-
+  const urlUsuario = 'https://ctd-todo-api.herokuapp.com/v1/users/getMe';
+  const btnCerrarSesion = document.querySelector('#closeApp')
+  const url = 'https://ctd-todo-api.herokuapp.com/v1';
+  const form = document.querySelector('form')
+  const nombre = document.querySelector('#inputNombre');
+  const apellido = document.querySelector('#inputApellido');
   /* -------------------------------------------------------------------------- */
   /*                          FUNCIÓN 1 - Cerrar sesión                         */
   /* -------------------------------------------------------------------------- */
 
   btnCerrarSesion.addEventListener('click', function () {
    
+    const cerrarSesion = confirm ("Desea cerrar la sesion")
+    if (cerrarSesion){
 
+      localStorage.clear()// limpiamos los datos de la sesion 
+      location.replace('index.html')   //si confirmamos el cierre de sesion redireccionamos la pagina   
 
+    }
 
   });
 
@@ -26,9 +34,20 @@ window.addEventListener('load', function () {
   /* -------------------------------------------------------------------------- */
 
   function obtenerNombreUsuario() {
-   
+      const settings = {
+      method: 'GET',
+      headers: {
+        authorization: localStorage.getItem('jwt')
+      }
+      }
+
+      console.log("consultando usuario")
+      fetch('urlUsuario', settings)
+      .then(response => response.json()
+      .then(data =>)
 
 
+   )
 
   };
 

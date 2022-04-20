@@ -1,4 +1,4 @@
-window.addEventListener('load', function () {
+    window.addEventListener('load', function () {
     /* ---------------------- obtenemos variables globales ---------------------- */
     const elementEmail = document.querySelector('#inputEmail');
     const elemenyPass = document.querySelector('#inputPassword');
@@ -10,13 +10,15 @@ window.addEventListener('load', function () {
     /* -------------------------------------------------------------------------- */
     form.addEventListener('submit', function (event) {
        event.preventDefault();
+
+       //preparamos el cuerpo de la request 
        const email = elementEmail.value 
        const password = elemenyPass.value 
         const payload = {
             email,
             password, 
         }
-
+        //configuramos la request del fetch
         const settings = {
            method: 'POST',
            body:JSON.stringify(payload),
@@ -25,7 +27,9 @@ window.addEventListener('load', function () {
            }
 
         }
+        //lanzamos la consulta de la API
         realizarLogin(settings);
+        //limpio los datos del formulario 
         form.reset()
 
     });
