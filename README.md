@@ -23,7 +23,7 @@ Link con la documentación de los endpoints de la API y su funcionamiento:
 - [ ] FUNCIÓN 1: Escuchar el submit y preparar los datos para elenvío.
 - [ ] FUNCIÓN 2: Realizar la petición a la API crear un nuevo usuario si completa todos los datos.
 
-## Requerimientos funcionales en pantalla de Tareas
+## Requerimientos funcionales en pxantalla de Tareas
 - [ ] FUNCIÓN 1: Darle funcionalidad al botón de "Cerrar sesión".
 - [ ] FUNCIÓN 2: Crear un función para obtener el nombre de usuario y presentarlo en pantalla.
 - [ ] FUNCIÓN 3: Implementar una función para obtener el listado de tareas.

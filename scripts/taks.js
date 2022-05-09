@@ -3,21 +3,18 @@
 
 
 
-/* ------ comienzan las funcionalidades una vez que carga el documento ------ */
+/* ------ comienzan las funcionalidades una vez que carga< el documento ------ */
 window.addEventListener('load', function () {
 
   /* ---------------- variables globales y llamado a funciones ---------------- */
   
-
-
   /* -------------------------------------------------------------------------- */
   /*                          FUNCIÓN 1 - Cerrar sesión                         */
   /* -------------------------------------------------------------------------- */
 
   btnCerrarSesion.addEventListener('click', function () {
    
-
-
+   
 
   });
 
@@ -26,10 +23,7 @@ window.addEventListener('load', function () {
   /* -------------------------------------------------------------------------- */
 
   function obtenerNombreUsuario() {
-   
-
-
-
+      
   };
 
 
