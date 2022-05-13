@@ -73,8 +73,8 @@ window.addEventListener('load', function () {
       console.table(tareas)
 
     
-      botonesCambioEstado();
-       botonBorrarTarea();
+      
+       
        renderizarTareas(tareas)
 
     })
@@ -163,6 +163,7 @@ window.addEventListener('load', function () {
 
         } //actualizamos el contador en la pantalla */
         numeroFinalizadas.innerText = contador;
+        botonesCambioEstado()
       })
     
   }
@@ -180,7 +181,7 @@ window.addEventListener('load', function () {
         console.log(event);
 
         const id = event.target.id;
-        const url = `${urlTareas}/${id}`
+        const url = `${urlTaks}/${id}`
         const payload = {};
 
         //segun el tipo de boton que fue clickeado, cambiamos el estado de la tarea
@@ -208,6 +209,7 @@ window.addEventListener('load', function () {
           })
       })
     });
+    botonBorrarTarea();
   }
   /* -------------------------------------------------------------------------- */
   /*                     FUNCIÓN 7 - Eliminar tarea [DELETE]                    */
@@ -221,7 +223,7 @@ window.addEventListener('load', function () {
       boton.addEventListener('click', function (event) {
         
         const id = event.target.id;
-        const url = `${urlTareas}/${id}`
+        const url = `${urlTaks}/${id}`
 
         const settingsBorrar= {
           method: 'DELETE',
